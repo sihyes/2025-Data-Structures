@@ -1,6 +1,6 @@
 code1 is about SparseMatrix.
 
-===Structures===
+### **Structures**
 - `element { row,col,value}` 
 Represents one non-zero element of the matrix.
 => `A[row][col] = value` 
@@ -11,7 +11,7 @@ Represents a SparseMatrix
 - `rows` & `cols` size of the original matrix.
 - `terms` number of non-zero values.
 
-====Functions====
+### **Functions**
 - `swap` 
 Swap two integer values using pointers.
 
@@ -36,7 +36,7 @@ Convert sparse matrix into a full 2D dense array.
 Non-zero values are placed at their positions, others are filled with 0.
 
 
-  ## Notes on Merge Sort
+**Merge Sort**
 Time Complexity: O(n log n) (efficient for large datasets).
 - Merge Sort is a **divide-and-conquer algorithm**:
   1. Divide the array into two halves.
@@ -44,10 +44,11 @@ Time Complexity: O(n log n) (efficient for large datasets).
   3. Merge the sorted halves into a single sorted array.
 - The recursion stops when `left >= right` (subarray has one element).
 
-===============================================================================
-code 2 is about Dynamic Memory Allocaion(When 3D Array, type of each element is double)
+------------------------------------------------------------------------------------------
+code 2 is about Dynamic Memory Allocaion
+(When 3D Array, type of each element is double)
 
-Functions
+### **Functions**
 
 - `double*** memoryAllocate(int x, int y, int z) `
 Allocate memory for a 3D array. ('double' type).
