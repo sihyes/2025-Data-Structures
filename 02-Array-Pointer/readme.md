@@ -1,68 +1,52 @@
-code1 is about SparseMatrix.
+# Sparse Matrix & 3D Array Operations in C++
 
-### **Structures**
-- `element { row,col,value}` 
-Represents one non-zero element of the matrix.
-=> `A[row][col] = value` 
+code1(sparsematrix.cpp) performs make sparseMatrix and transpose from its original matrix, and then finally make transposed version's matrix to sparse matrix.
 
-`SparseMatrix {element data[MAX_TERMS],rows,cols,terms}`
-Represents a SparseMatrix
-- `data[MAX_TERMS]` stores all non-zero elements.
-- `rows` & `cols` size of the original matrix.
-- `terms` number of non-zero values.
+code2(3D_Double.cpp) performs operations on sparse matrices to reduce memory usage.nsusing memory efficiently.
 
-### **Functions**
-- `swap` 
-Swap two integer values using pointers.
+## development Environment
+- OS: Windows 11
+- IDE: CLion 2025.2.2
+- Language: C
+- Compiler: MinGW (MSYS2 base)
+- Build System: CMake
 
-- `merge(element arr[], int left, int mid, int right, element tmp[])`  
-Merge two sorted subarrays (arr[left..mid] and arr[mid+1..right]) into one sorted array.
-Sorting rule:
- 1. Primary key → row (ascending)
- 2. Secondary key → col (ascending if rows are equal)
-
-- `mergeSort(element arr[], int left, int right, element tmp[])`  
-Recursively split the array into subarrays until size = 1.
-Then merge back with 'merge' in ascending order.
-Guarantees all elements are sorted by row and column.
-
-- `transpose(SparseMatrix B)`  
-Returns the transpose of matrix B:
- 1. Swap row and col of each element.
- 2. Sort elements again using mergeSort.
-
-- `denseMatrix(SparseMatrix B)`  
-Convert sparse matrix into a full 2D dense array.
-Non-zero values are placed at their positions, others are filled with 0.
+## Installation
+1. Install CLion
+2. Install MinGW and add its `bin` directory to your system PATH
+3. Open the project folder in CLion
 
 
-**Merge Sort**
-Time Complexity: O(n log n) (efficient for large datasets).
-- Merge Sort is a **divide-and-conquer algorithm**:
-  1. Divide the array into two halves.
-  2. Recursively sort each half.
-  3. Merge the sorted halves into a single sorted array.
-- The recursion stops when `left >= right` (subarray has one element).
+## Compile & Build
+This project uses CMake. Each executable corresponds to a specific source file.
+- CMake target defined in `CMakeLists.txt`:
 
-------------------------------------------------------------------------------------------
-code 2 is about Dynamic Memory Allocaion
-(When 3D Array, type of each element is double)
+```cmake
+add_executable(2025_Data_Structures
+        02-Array-Pointer/sparsematrix.cpp)
+```
+1. Open the project in CLion
+2. Click Build -> Build Project or press Ctrl+F9
+3. After building, the executable will appear in cmake-build-debug or cmake-build-release folder
 
-### **Functions**
+Note: If you want to run 3D_double.cpp, you need to modify CMakeLists.txt:
+```cmake
+add_executable(3D_double_exec
+        3D_double.cpp)
+```
+Then rebuild the project to create a new executable.
 
-- `double*** memoryAllocate(int x, int y, int z) `
-Allocate memory for a 3D array. ('double' type).
-Return pointer which points to the 3D array.
 
-- `double*** addition3DArray(double*** A, double*** B, double*** C,int x, int y, int z)`
-Take two 3D arrays A and B, add them element by element.
-Store result in array C. 
-Return C.
+## Running the Program
+ In CLion, click Run -> Run `'2025_Data_Structures'` or press `Shift+F10`
 
-- `void deallocate(double*** A,int x,int y)`
-Free the memory allocated for array A.
-Need x and y for correct deallocation of all layers.
+ ## Notes
+ Each executable corresponds to a specific source file.
+adjust `CMakeLists.txt` if you want to run a different file.
 
-- `void confirmPrint(double*** A, int x, int y, int z)`
-Print all elements of the 3D array.
-Used for checking (validation purpose).
+
+## Appendix
+For detailed explanations of structures, functions, and algorithms used in each program, please refer to the `DOC` folder:
+
+- Sparse Matrix operations → `DOC/SparseMatrix.md`
+- 3D Array operations → `DOC/3D_Array.md`
