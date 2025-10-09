@@ -62,12 +62,13 @@ int main() {
 
     p[5] = (DlistNode *)malloc(sizeof(DlistNode));
     p[5] -> data = 5;
-    dinsert_last_node(&head_node,p[5]); // headnode의 llink가 마지막노드! 마지막노드에 삽입해줘용
-    display(&head_node);
+    // dinsert_node(&head_node,p[5]); // headnode의 llink가 마지막노드! 마지막노드에 삽입해줘용
+    dinsert_node((&head_node)->llink,p[5]);
 
     p[6] = (DlistNode *)malloc(sizeof(DlistNode));
     p[6] -> data = 6;
-    dinsert_first_node(&head_node,p[6]); //제일 앞에 넣어줍니다.
+    // dinsert_first_node(&head_node,p[6]); //제일 앞에 넣어줍니다.
+    dinsert_node(&head_node,p[6]);
     display(&head_node);
 return 0;
 }
