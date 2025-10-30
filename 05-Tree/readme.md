@@ -28,7 +28,7 @@ Through this project, you can deepen your understanding of **tree traversal**, *
    * The program verifies correctness by running three test examples and ensuring the outputs match the original implementation’s results.
      Demonstrates flexibility in BST deletion and highlights the symmetric relationship between successor- and predecessor-based deletion strategies.
 
----
+
 
 ## Development Environment
 
@@ -38,7 +38,7 @@ Through this project, you can deepen your understanding of **tree traversal**, *
 * **Compiler:** MinGW (MSYS2 base)
 * **Build System:** CMake
 
----
+
 
 ## Installation
 
@@ -46,7 +46,7 @@ Through this project, you can deepen your understanding of **tree traversal**, *
 2. Install **MinGW** and add its `bin` directory to your system `PATH`
 3. Open this project folder in CLion
 
----
+
 
 ## Compile & Build
 
@@ -83,13 +83,15 @@ In CLion:
 Click **Run → Run ‘2025_Data_Structures’** or press **Shift+F10**
 The output window will display inorder traversal results before and after operations, verifying correctness.
 
----
+
 
 ## Notes
 
+
 Each executable corresponds to a specific source file. 
 adjust `CMakeLists.txt` if you want to run a different file.
----
+
+
 
 ## Appendix
 
