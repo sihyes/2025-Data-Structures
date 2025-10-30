@@ -18,7 +18,7 @@ typedef struct {
 
 // r = +1 위노드 , l = -1 아래노드라고 가정하자.
 void init(LinkedStackType *s) {
-    s->top = (DlistNode *) malloc(sizeof(DlistNode)); // 헤드노드 생성 초기화해주는것에 ㅏㄱ까움.
+    s->top = (DlistNode *) malloc(sizeof(DlistNode)); // 헤드노드 생성 초기화해주는것에 가까움
     s->top->llink = s->top;
     s->top->rlink = s->top; // 자기자신을 가리키는 헤드노드만 있는 상태
 }
@@ -41,9 +41,6 @@ void push(LinkedStackType *s, element item) {
 
     s->top->rlink->llink = temp;
     s->top->rlink = temp;
-
-    // //? 여기에서 s->top을 옮겨주어야하는가.??? 궁금합니다. s->top = temp로?
-    // s->top = temp;
 }
 
 element pop(LinkedStackType *s) {
