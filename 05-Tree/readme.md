@@ -97,6 +97,6 @@ adjust `CMakeLists.txt` if you want to run a different file.
 
 For detailed analysis and theory behind these implementations, visit my blog:
 
-* **Link1:** [Assignment05_Technical Report – BST Deletion Using Predecessor](https://sihyes.tistory.com/118)
-* **Link2:** [[자료구조] Binary Search Tree – Successor & Predecessor](https://sihyes.tistory.com/129)
+* **Link1:** [Assignment05 Technical Report](https://sihyes.tistory.com/133)
+* **Link2:** [[자료구조] 트리. Tree](https://sihyes.tistory.com/136)
 
